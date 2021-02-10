@@ -14,6 +14,7 @@ class StepsDefinitions():
     @given("Abrir la aplicacion")
     def abrir_navegador(self):
         URL = Inicializar.URL
+        print(URL)
         self.driver.get(URL)
 
 
@@ -93,10 +94,7 @@ class StepsDefinitions():
         segundos = int(segundos)
         Selenium.esperar(self, segundos)
 
-    @step("Verifico en texto Lo sentimos, este correo ya está registrado\.")
-    def step_impl(self):
-        """
-        :type context: behave.runner.Context
-        """
-        pass
 
+    @given("Imprimo un valor")
+    def step_impl(context):
+        print("Hola Mundo")

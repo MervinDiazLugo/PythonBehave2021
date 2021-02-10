@@ -2,6 +2,9 @@
 @selenium
 Feature: Funciones basicas de selenium con BDD
 
+  Background:
+    Given  Imprimo un valor
+
   @Navegador
   Scenario: Abrir el navegador
     Given Abrir la aplicacion
@@ -21,7 +24,6 @@ Feature: Funciones basicas de selenium con BDD
     Given Abrir la aplicacion
     And Cargo el DOM de la App: Spotify_registro
     And En el campo Email escribo mervindiazlugo@gmail.com
-    Then cierro la app
 
   @Capturas
   Scenario: Tomar capturas de pantalla
@@ -30,13 +32,13 @@ Feature: Funciones basicas de selenium con BDD
     And En el campo Email escribo mervindiazlugo@gmail.com
     And Capturo pantalla: EmailSpoty
     And Tomar Captura: Test003
-    Then cierro la app
 
   @Contexto
   Scenario:  Variables de Contexto
     Given Abrir la aplicacion
     And Cargo el DOM de la App: Spotify_registro
-    And En el campo Email escribo Scenario:TBASE
+    And En el campo Email escribo Scenario:email
+    And En el campo Email Confirmacion escribo Scenario:Udemy
     And Espero 8 segundos
 
   @TextyDrop

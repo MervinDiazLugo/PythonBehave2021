@@ -21,13 +21,11 @@ def before_scenario(self, scenario):
     else:
         self.driver = Selenium.abrir_navegador(self)
 
-    '''if Inicializar.Environment == 'Dev':
-        Inicializar.Scenario = {
-            "ENV_ID": "74",
-            "TBASE": "BASE DEV",
-            "Proceso": "Review 170",
+    if Inicializar.Environment == 'Dev':
+        Inicializar.Scenario["Udemy"] = "Hola Chicos Dev"
 
-        }'''
+    if Inicializar.Environment == 'Test':
+        Inicializar.Scenario["Udemy"] = "Hola Chicos Test"
 
 
 def before_step(self, step):

@@ -42,8 +42,8 @@
 
 
   "Email Confirmacion": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//input[@name='signup_form[confirm_email]']"
+    "GetFieldBy": "id",
+    "ValueToFind": "confirm"
   },
 
   "Pass": {
